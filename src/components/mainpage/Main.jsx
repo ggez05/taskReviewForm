@@ -14,10 +14,13 @@ const Main = () => {
 
   const submithandler = async () => {
     try {
-      const { data } = await axios.post("http://localhost:8000/givereview", {
-        review,
-        comment,
-      });
+      const { data } = await axios.post(
+        "https://review-app-form.herokuapp.com/givereview",
+        {
+          review,
+          comment,
+        }
+      );
 
       dispatch({ type: "SUBMIT", payload: data });
     } catch (error) {
