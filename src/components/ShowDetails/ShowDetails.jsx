@@ -14,6 +14,7 @@ const ShowDetails = () => {
         <div className="savedat_user">
           THE DATE TIME YOU SAVE AT - {user.savedAt}
         </div>
+        <div className="objectid_user">OBJECT ID OF MONGO DB - {user.id}</div>
       </div>
     </div>
   );
