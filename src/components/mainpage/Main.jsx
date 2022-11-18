@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./main.styles.css";
 
-const Main = () => {
+const Main = ({ setLoading }) => {
   const [showcomment, setShowComment] = useState(false);
   const [review, setReview] = useState(0);
   const [comment, setComment] = useState("");
@@ -14,6 +14,7 @@ const Main = () => {
 
   const submithandler = async () => {
     try {
+      setLoading(true);
       const { data } = await axios.post(
         "https://review-app-form.herokuapp.com/givereview",
         {
@@ -23,6 +24,7 @@ const Main = () => {
       );
 
       dispatch({ type: "SUBMIT", payload: data });
+      setLoading(false);
     } catch (error) {
       setError(error.response.data.message);
     }

@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./showdetails.styles.css";
 
-const ShowDetails = () => {
+const ShowDetails = ({ loading, setLoading }) => {
   const { user } = useSelector((user) => ({ ...user }));
 
   return (

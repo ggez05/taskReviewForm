@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.loadingback{
+  background: url(./assests/loading22.gif);
+  width: 500px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
